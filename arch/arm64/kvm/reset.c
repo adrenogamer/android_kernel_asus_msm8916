@@ -79,6 +79,9 @@ int kvm_arch_dev_ioctl_check_extension(long ext)
  * the virtual CPU struct to their architectually defined reset
  * values.
  */
+
+#define kvm_timer_vcpu_reset(vcpu, cpu_vtimer_irq);
+
 int kvm_reset_vcpu(struct kvm_vcpu *vcpu)
 {
 	const struct kvm_irq_level *cpu_vtimer_irq;
